@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<table>
+	<tr>
+	  <td colspan="2"><h1><strong><%= @donut.title %></strong></h1></td>
+	</tr>
+	<tr>
+		<td><%= donut_image_tag @donut , width: 250 %></td>
+		<td><%= simple_format(@donut.material) %></td>
+	</tr>
+</table>
+
+
+<%= link_to 'Edit', edit_donut_path(@donut) %> |
+<%= link_to 'Back', donuts_path %>

@@ -13,8 +13,75 @@
  *= require_tree .
  *= require_self
  */
- /*
- body{
- 	background-color: antiquewhite;
+
+
+
+/*ヘッダ*/
+
+header{
+	padding: 0px;
+	margin: 0px 0px 0px 0px;
+}
+header ul{
+	list-style: none;
+	background-color: antiquewhite;
+}
+header li{
+	margin-right: 30px; 
+	text-align:right;
+}
+header img{
+	height: 268px;
+	width: 375px;
+}
+
+
+/*メニュー*/
+aside{
+	margin: auto -50px auto;
+ 	float: left;
  }
- */
+
+aside ul{ 
+	margin: 0; 
+	padding: 0; 
+	list-style: none; 
+}
+aside li.menuList{ 
+	display: inline; 
+	padding: 0; 
+	margin: 0; 
+}
+aside li.menuList a{
+	display: block; 
+	border: 1px solid #9F99A3;
+	-webkit-border-top-right-radius: 30px;
+	-webkit-border-bottom-right-radius: 30px;
+	-moz-border-radius-topright: 30px;
+	-moz-border-radius-bottomright: 30px;
+	-webkit-transition: all 0.3s ease;
+	-moz-transition: all 0.3s ease;
+
+	background-color: #EEEEEE;
+	padding: 10px 10px;
+	text-align: right;
+	text-decoration: none;
+	color: #333;
+	width: 130px; 
+	margin: 15px 0px;
+	font-size: 17px;
+}
+aside li.menuList a:hover{
+	border: 1px solid #8593A9;
+	background-color: #9EB7DD;
+	margin-left: 20px;
+	margin-right: -20px;
+}
+
+
+
+/*メインコンテンツ*/
+ main{
+ 	margin: 0 auto;
+ }
+

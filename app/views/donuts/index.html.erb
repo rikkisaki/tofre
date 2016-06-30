@@ -1,0 +1,26 @@
+<p id="notice"><%= notice %></p>
+
+<h1>ドーナツレシピ</h1>
+
+<%= form_tag :search_donuts, method: :get do %>
+  <p><%= text_field_tag "q", params[:q] %><%= submit_tag "検索" %></p>
+<% end %>
+
+<table>
+  <% @donuts.each do |donut| %>
+    <tr>
+      <td rowspan="2"><%= donut_image_tag donut , width: 100 %></td>
+      <td><h2><%= link_to "#{donut.title}", donut %></h2></td>
+      <td rowspan="2"><%= link_to 'Show', donut %></td>
+      <td rowspan="2"><%= link_to 'Edit', edit_donut_path(donut) %></td>
+      <td rowspan="2"><%= link_to 'Destroy', donut, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    </tr>
+    <tr>
+      <td style="width: 230px; word-break: break-all;"><%= donut.material %></td>
+    </tr>
+  <% end %>
+</table>
+
+<br>
+
+<%= link_to 'New Donut', new_donut_path %>

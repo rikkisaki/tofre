@@ -1,0 +1,33 @@
+<%= form_for(@donut) do |f| %>
+  <% if @donut.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@donut.errors.count, "error") %> prohibited this donut from being saved:</h2>
+
+      <ul>
+      <% @donut.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :user_id %><br>
+    <%= f.text_field :user_id %>
+  </div>
+  <div class="field">
+    <%= f.label :title %><br>
+    <%= f.text_area :title %>
+  </div>
+  <div class="field">
+    <%= f.label :material %><br>
+    <%= f.text_area :material %>
+  </div>
+   <div class="field">
+    <%= f.label :image %><br>
+    <%= f.file_field :image %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

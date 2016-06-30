@@ -1,0 +1,14 @@
+<% if user_signed_in? %>
+	<h1>ようこそaaaaa、<%= current_user.username %>さん</h1>
+	<p>とうふれのトップページです。</p>
+	<%= link_to '冷蔵庫アプリへ', refrigerators_path %>
+	<%= link_to 'ドーナツレシピへ', donuts_path %>
+	<%= link_to '掲示板行くわ', bulletin_boards_path %>
+<% else %>
+	<h1>ようこそ</h1>
+	<p>とうふれのトップページです。</p>
+<% end%>
+
+
+
+
